@@ -1,4 +1,3 @@
-import SearchInput from "@/components/home/SearchInput";
 import Layout from "@/layouts/Layout";
 import Head from "next/head";
 import { ReactElement } from "react";
@@ -12,7 +11,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>cotenote</main>
     </>
   );
 }
