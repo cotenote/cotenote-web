@@ -6,7 +6,7 @@ function Footer() {
   return (
     <StyledFooter>
       <Pen
-        src={"/assets/footer_pen.svg"}
+        src={"/assets/images/footer_pen.svg"}
         width={24}
         height={56}
         alt={"footer_pen"}
