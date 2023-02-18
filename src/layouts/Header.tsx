@@ -15,5 +15,5 @@ const StyledHeader = styled.header`
   top: 0;
 
   z-index: var(--header-z-index);
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
 `;

@@ -26,7 +26,7 @@ const StyledFooter = styled.div`
   bottom: 0;
   z-index: var(--footer-z-index);
 
-  border-top: 0.09375em solid var(--primary);
+  border-top: var(--one-point-five) solid var(--primary);
 `;
 
 const Pen = styled(Image)`
