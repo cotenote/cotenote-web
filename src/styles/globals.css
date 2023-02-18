@@ -3,6 +3,9 @@
 
   --header-z-index: 10;
   --footer-z-index: 10;
+
   --header-height: 50px;
   --footer-height: 100px;
+
+  --one-point-five: 0.09375em;
 }
