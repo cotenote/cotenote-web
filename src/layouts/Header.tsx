@@ -1,10 +1,12 @@
+import BaseButton from "@/components/common/button/BaseButton";
+import { ButtonBase } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 
 function Header() {
   return (
     <StyledHeader>
-      <button>hi</button>
+      <BaseButton variant="contained">로그인 하기</BaseButton>
     </StyledHeader>
   );
 }
@@ -20,5 +22,11 @@ const StyledHeader = styled.header`
 
   border-bottom: var(--zero-point-five) solid #c5c7c2;
   z-index: var(--header-z-index);
-  /* background-color: var(--primary); */
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  button {
+    margin-right: 72px;
+  }
 `;
