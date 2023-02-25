@@ -20,10 +20,10 @@ type AppPropsWithLayout = AppProps & {
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);
   return (
-    <ThemeProvider theme={theme}>
-      <StylesProvider generateClassName={generateClassName}>
+    <StylesProvider generateClassName={generateClassName}>
+      <ThemeProvider theme={theme}>
         {getLayout(<Component {...pageProps} />)}
-      </StylesProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </StylesProvider>
   );
 }
