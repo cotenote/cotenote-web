@@ -6,14 +6,11 @@ import Document, {
   DocumentContext,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { ServerStyleSheets } from "@mui/styles";
-import { generateClassName } from "@/lib/generateClassName";
 import React from "react";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const styledComponentsSheet = new ServerStyleSheet();
-    const muiSheets = new ServerStyleSheets({ generateClassName });
 
     const originalRenderPage = ctx.renderPage;
 
@@ -21,9 +18,7 @@ export default class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
-            styledComponentsSheet.collectStyles(
-              muiSheets.collect(<App {...props} />)
-            ),
+            styledComponentsSheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -32,7 +27,6 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: [
           ...React.Children.toArray(initialProps.styles),
-          muiSheets.getStyleElement(),
           styledComponentsSheet.getStyleElement(),
         ],
       };

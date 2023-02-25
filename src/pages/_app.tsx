@@ -8,7 +8,6 @@ import { ReactElement, ReactNode } from "react";
 import { ThemeProvider } from "@mui/material";
 import { StylesProvider } from "@mui/styles";
 import { theme } from "@/styles/theme";
-import { generateClassName } from "@/lib/generateClassName";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -21,10 +20,10 @@ type AppPropsWithLayout = AppProps & {
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);
   return (
-    <StylesProvider generateClassName={generateClassName} injectFirst>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <StylesProvider injectFirst>
         {getLayout(<Component {...pageProps} />)}
-      </ThemeProvider>
-    </StylesProvider>
+      </StylesProvider>
+    </ThemeProvider>
   );
 }
