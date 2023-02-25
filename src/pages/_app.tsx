@@ -6,9 +6,10 @@ import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { ReactElement, ReactNode } from "react";
 import { ThemeProvider } from "@mui/material";
-import { theme } from "@/styles/theme";
 import { StylesProvider } from "@mui/styles";
+import { theme } from "@/styles/theme";
 import { generateClassName } from "@/lib/generateClassName";
+
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -20,7 +21,7 @@ type AppPropsWithLayout = AppProps & {
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);
   return (
-    <StylesProvider generateClassName={generateClassName}>
+    <StylesProvider generateClassName={generateClassName} injectFirst>
       <ThemeProvider theme={theme}>
         {getLayout(<Component {...pageProps} />)}
       </ThemeProvider>

@@ -6,13 +6,14 @@ import Document, {
   DocumentContext,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { ServerStyleSheets } from "@material-ui/core/styles";
+import { ServerStyleSheets } from "@mui/styles";
+import { generateClassName } from "@/lib/generateClassName";
 import React from "react";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const styledComponentsSheet = new ServerStyleSheet();
-    const muiSheets = new ServerStyleSheets();
+    const muiSheets = new ServerStyleSheets({ generateClassName });
 
     const originalRenderPage = ctx.renderPage;
 
