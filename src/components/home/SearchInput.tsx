@@ -11,6 +11,7 @@ function SearchInput() {
         width={431}
         height={57}
         alt="logo"
+        priority
       />
       <Input
         placeholder="내용을 입력해주세요"
