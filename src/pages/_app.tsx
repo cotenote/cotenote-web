@@ -5,8 +5,7 @@ import "@/styles/font.css";
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { ReactElement, ReactNode } from "react";
-import { ThemeProvider } from "@mui/material";
-import { StylesProvider } from "@mui/styles";
+import { StyledEngineProvider, ThemeProvider } from "@mui/material";
 import { theme } from "@/styles/theme";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -21,9 +20,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);
   return (
     <ThemeProvider theme={theme}>
-      <StylesProvider injectFirst>
+      <StyledEngineProvider injectFirst>
         {getLayout(<Component {...pageProps} />)}
-      </StylesProvider>
+      </StyledEngineProvider>
     </ThemeProvider>
   );
 }
