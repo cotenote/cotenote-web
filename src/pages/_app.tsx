@@ -1,3 +1,7 @@
+import "@/styles/globals.css";
+import "@/styles/miniReset.css";
+import "@/styles/font.css";
+
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { ReactElement, ReactNode } from "react";
@@ -5,11 +9,6 @@ import { ThemeProvider } from "@mui/material";
 import { theme } from "@/styles/theme";
 import { StylesProvider } from "@mui/styles";
 import { generateClassName } from "@/lib/generateClassName";
-
-import "@/styles/globals.css";
-import "@/styles/miniReset.css";
-import "@/styles/font.css";
-
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
