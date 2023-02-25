@@ -30,7 +30,7 @@ const StyledButton = styled(Button)<StyledButtonProps>`
   border-radius: 8px;
 
   color: ${(props) =>
-    props.variant !== "contained" ? `var(--primary)` : "white"};
+    props.variant !== "contained" ? `var(--primary)` : `var(--white)`};
   box-shadow: none;
 
   border: var(--one-point-five) solid var(--primary);
