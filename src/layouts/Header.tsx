@@ -4,15 +4,19 @@ import styled from "styled-components";
 
 function Header() {
   return (
-    <StyledHeader>
-      <BaseButton variant="contained">로그인 하기</BaseButton>
-    </StyledHeader>
+    <HeaderWrapper>
+      <StyledHeader>
+        <BaseButton className="login_button" variant="contained">
+          로그인 하기
+        </BaseButton>
+      </StyledHeader>
+    </HeaderWrapper>
   );
 }
 
 export default Header;
 
-const StyledHeader = styled.header`
+const HeaderWrapper = styled.div`
   width: 100%;
   height: var(--header-height);
 
@@ -25,7 +29,15 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: right;
-  button {
-    margin-right: 72px;
+
+  .login_button {
+    float: right;
   }
+`;
+const StyledHeader = styled.header`
+  width: 100%;
+  max-width: var(--header-max-width);
+  padding: 0 var(--mobile-padding);
+
+  margin: 0 auto;
 `;
