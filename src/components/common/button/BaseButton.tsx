@@ -33,8 +33,20 @@ const StyledButton = styled(Button)<StyledButtonProps>`
     props.variant !== "contained" ? `var(--primary)` : `var(--white)`};
   box-shadow: none;
 
-  border: var(--one-point-five) solid var(--primary);
   font-size: 16px;
   line-height: 16px;
+
+  :focus,
+  :hover {
+    outline: none !important;
+    background: var(--button-pseudo-class);
+    box-shadow: none;
+  }
+
+  :disabled {
+    color: var(--white);
+    background: var(--text-80);
+    border: var(--one-point-five) solid var(--text-80);
+  }
   ${(props) => props.css}
 `;
