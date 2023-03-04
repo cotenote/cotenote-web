@@ -32,7 +32,7 @@ const FooterWrapper = styled.div`
 `;
 
 const StyledFooter = styled.footer`
-  max-width: 1296px;
+  max-width: var(--footer-max-width);
   padding: 15px 15px 15px;
 
   display: flex;
