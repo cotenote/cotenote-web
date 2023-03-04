@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
-import { ReactElement, ReactNode } from "react";
+import { ReactElement, ReactNode, useEffect } from "react";
 import {
   StyledEngineProvider,
   ThemeProvider as MUIThemeProvider,
@@ -22,6 +22,19 @@ type AppPropsWithLayout = AppProps & {
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);
+
+  useEffect(() => {
+    function handleResize() {
+      const body = document.querySelector("body") ?? document.body;
+      body.style.height = window.innerHeight + "px";
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <MUIThemeProvider theme={theme}>
       <StyledThemeProvider theme={theme}>
