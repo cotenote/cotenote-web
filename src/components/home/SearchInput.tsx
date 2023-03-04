@@ -45,8 +45,16 @@ const SearchInputWrapper = styled.div`
 `;
 
 const StyledTextField = styled(BaseTextField)`
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 16px;
+
   fieldSet {
     border-radius: 22px;
     border: 3px solid var(--primary) !important;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.values.tablet}px) {
+    font-size: 14px;
   }
 `;
