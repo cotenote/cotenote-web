@@ -48,7 +48,12 @@ const StyledTextField = styled(BaseTextField)`
   font-weight: 500;
   font-size: 24px;
   line-height: 16px;
+  padding: 0px 30px;
 
+  input::placeholder {
+    color: var(--primary);
+    opacity: 1;
+  }
   fieldSet {
     border-radius: 22px;
     border: 3px solid var(--primary) !important;
