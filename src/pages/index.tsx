@@ -1,3 +1,5 @@
+import Container from "@/components/common/Container";
+import BaseTextField from "@/components/common/input/BaseTextField";
 import SearchInput from "@/components/home/SearchInput";
 import Layout from "@/layouts/Layout";
 import Head from "next/head";
@@ -12,7 +14,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SearchInput />
+      <Container>
+        <SearchInput />
+      </Container>
     </>
   );
 }
