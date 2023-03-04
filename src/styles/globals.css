@@ -17,7 +17,10 @@
   --footer-height: 46px;
 
   --mobile-padding: 15px;
+  --footer-padding: 25px;
 
   --one-point-five: 0.09375em;
   --zero-point-five: 0.031em;
+
+  --header-max-width: 1296px;
 }
