@@ -33,6 +33,9 @@ const HeaderWrapper = styled.div`
   .login_button {
     float: right;
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.values.tablet}px) {
+    border-bottom: none;
+  }
 `;
 const StyledHeader = styled.header`
   width: 100%;
