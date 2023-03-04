@@ -32,4 +32,8 @@ export default BaseTextField;
 
 const StyledTextField = styled(OutlinedInput)`
   width: 100%;
+
+  :hover {
+    background: var(--secondary);
+  }
 `;
