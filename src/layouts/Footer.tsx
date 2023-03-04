@@ -57,7 +57,6 @@ const StyledFooter = styled.footer`
 `;
 
 const Pen = styled(Image)`
-  box-sizing: content-box;
   position: absolute;
   top: -56px;
   right: 174px;
