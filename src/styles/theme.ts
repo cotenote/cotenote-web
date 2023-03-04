@@ -6,4 +6,7 @@ export const theme = createTheme({
       main: "#59d58b",
     },
   },
+  shape: {
+    borderRadius: 8,
+  },
 });
