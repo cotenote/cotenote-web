@@ -4,7 +4,7 @@
 
   --button-pseudo-class: #1ba561cc;
 
-  --white: #fbfdf8;
+  --white: #ffffff;
   --black: #191c19;
 
   --text-90: #e1e3de;
@@ -24,7 +24,58 @@
   --one-point-five: 0.09375em;
   --zero-point-five: 0.031em;
 
-  --header-max-width: 1296px;
+  --header-max-width: 1256px;
+  --footer-max-width: 1256px;
+}
+.body01 {
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
 
-  --footer-max-width: 1400px;
+.body02 {
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.footer {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--text-50);
+}
+
+.button {
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+.label {
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 16px;
+}
+
+.sub_title {
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 60px;
+}
+
+title {
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
 }
