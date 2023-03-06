@@ -10,8 +10,8 @@ function SearchInput() {
       <Image
         className="main_logo"
         src={"/assets/images/logo.svg"}
-        width={431}
-        height={57}
+        width={400}
+        height={56}
         alt="main_logo"
         priority
       />
@@ -35,31 +35,31 @@ function SearchInput() {
 export default SearchInput;
 
 const SearchInputWrapper = styled.div`
-  height: calc(100vh - var(--footer-height));
+  height: calc(100vh - var(--footer-height) - var(--header-height));
   padding: 0 9px;
 
   display: flex;
-  gap: 66px;
+  gap: 46px;
 
   align-items: center;
   justify-content: center;
   flex-direction: column;
   @media (max-width: ${({ theme }) => theme.breakpoints.values.tablet}px) {
-    height: calc(100vh - var(--footer-height) - var(--header-height));
     gap: 45px;
     .main_logo {
-      width: 260px;
+      width: 280px;
     }
   }
 `;
 
 const StyledTextField = styled(BaseTextField)`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 16px;
-  padding: 21px 33px;
+  padding: 17px 20px;
+  border-radius: 18px;
+
   input {
-    padding: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 16px;
   }
 
   input::placeholder {
@@ -67,13 +67,10 @@ const StyledTextField = styled(BaseTextField)`
     opacity: 1;
   }
   fieldSet {
-    border-radius: 22px;
     border: 3px solid var(--primary) !important;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.values.tablet}px) {
-    font-size: 14px;
-
-    padding: 16px 18px;
+    padding: 10px 18px 15px;
   }
 `;

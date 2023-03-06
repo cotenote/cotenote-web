@@ -32,8 +32,21 @@ export default BaseTextField;
 
 const StyledTextField = styled(OutlinedInput)`
   width: 100%;
+  padding: 17px 15px;
+
+  input {
+    padding: 0;
+  }
 
   :hover {
     background: var(--secondary);
+  }
+  :focus-within,
+  :target {
+    background: var(--white) !important;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.values.tablet}px) {
+    padding: 13px 11px 8px;
   }
 `;

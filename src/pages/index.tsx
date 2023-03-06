@@ -1,5 +1,4 @@
 import Container from "@/components/common/Container";
-import BaseTextField from "@/components/common/input/BaseTextField";
 import SearchInput from "@/components/home/SearchInput";
 import Layout from "@/layouts/Layout";
 import Head from "next/head";

@@ -12,8 +12,8 @@ function Footer() {
         alt={"footer_pen"}
       />
       <StyledFooter>
-        <p className="footer_text">Copyright © 2022 Cotenote Inc.</p>
-        <p className="footer_text">문의 | cotenoteofficial@gmail.com</p>
+        <p className="footer">Copyright © 2022 Cotenote Inc.</p>
+        <p className="footer">문의 | cotenoteofficial@gmail.com</p>
       </StyledFooter>
     </FooterWrapper>
   );
@@ -40,18 +40,11 @@ const StyledFooter = styled.footer`
 
   margin: auto;
 
-  .footer_text {
-    font-size: 16px;
-    line-height: 16px;
-    color: var(--text-50);
-  }
   @media (max-width: ${({ theme }) => theme.breakpoints.values.tablet}px) {
     justify-content: right;
-    .footer_text:first-of-type {
+
+    & p:first-of-type {
       display: none;
-    }
-    .footer_text {
-      font-size: 14px;
     }
   }
 `;
