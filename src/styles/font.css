@@ -1,20 +1,15 @@
 @font-face {
   font-family: "Spoqa-Han-Sans-Regular";
-  src: url("../../public/assets/fonts/Spoqa-Han-Sans-Regular.woff");
+  src: url("../assets/fonts/Spoqa-Han-Sans-Regular.woff");
 }
 @font-face {
   font-family: "Spoqa-Han-Sans-Bold";
-  src: url("../../public/assets/fonts/Spoqa-Han-Sans-Bold.woff");
+  src: url("../assets/fonts/Spoqa-Han-Sans-Bold.woff");
 }
 
 @font-face {
   font-family: "Spoqa-Han-Sans-Light";
-  src: url("../../public/assets/fonts/Spoqa-Han-Sans-Light.woff");
-}
-
-@font-face {
-  font-family: "Spoqa-Han-Sans-Thin";
-  src: url("../../public/assets/fonts/Spoqa-Han-Sans-Thin.woff");
+  src: url("../assets/fonts/Spoqa-Han-Sans-Light.woff");
 }
 
 * {

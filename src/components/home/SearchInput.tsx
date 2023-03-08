@@ -3,16 +3,17 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import BaseTextField from "../common/input/BaseTextField";
-
+import SearchIconSrc from "@/assets/images/search_icon.svg";
+import LogoSrc from "@/assets/images/logo.svg";
 function SearchInput() {
   return (
     <SearchInputWrapper>
       <Image
         className="main_logo"
-        src={"/assets/images/logo.svg"}
+        src={LogoSrc}
         width={400}
         height={56}
-        alt="main_logo"
+        alt="logo"
         priority
       />
       <StyledTextField
@@ -20,7 +21,7 @@ function SearchInput() {
         endAdornment={
           <ButtonBase>
             <Image
-              src={"/assets/images/search_icon.svg"}
+              src={SearchIconSrc}
               width={25}
               height={25}
               alt={"search_icon"}
