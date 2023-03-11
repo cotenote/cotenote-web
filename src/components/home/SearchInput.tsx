@@ -54,13 +54,13 @@ const SearchInputWrapper = styled.div`
 `;
 
 const StyledTextField = styled(BaseTextField)`
-  padding: 17px 20px;
+  padding: 15px 20px;
   border-radius: 18px;
 
   input {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 18px;
   }
 
   input::placeholder {
@@ -72,6 +72,6 @@ const StyledTextField = styled(BaseTextField)`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.values.tablet}px) {
-    padding: 10px 18px 15px;
+    padding: 10px 18px;
   }
 `;
