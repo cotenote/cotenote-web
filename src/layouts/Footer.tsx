@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
-import FooterPenSrc from "@/assets/images/footer_pen.svg";
+import PenSrc from "@/assets/images/pen.svg";
 function Footer() {
   return (
     <FooterWrapper>
-      <Pen src={FooterPenSrc} width={24} height={56} alt={"footer_pen"} />
+      <Pen src={PenSrc} width={24} height={56} alt={"footer_pen"} />
       <StyledFooter>
         <p className="footer">Copyright © 2022 Cotenote Inc.</p>
         <p className="footer">문의 | cotenoteofficial@gmail.com</p>
