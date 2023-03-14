@@ -1,5 +1,5 @@
 import Container from "@/components/common/Container";
-import SearchInput from "@/components/home/SearchInput";
+import { SearchInput } from "@/components/home";
 import Layout from "@/layouts/Layout";
 import Head from "next/head";
 import { ReactElement } from "react";
