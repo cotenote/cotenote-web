@@ -1,4 +1,4 @@
-import BaseButton from "@/components/common/button/BaseButton";
+import { BaseButton } from "@/components/common/button";
 import React from "react";
 import styled from "styled-components";
 import LoginButton from "./LoginButton";

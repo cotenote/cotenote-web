@@ -29,4 +29,9 @@ export const theme: Theme = createTheme({
       desktop: 1200,
     },
   },
+  typography: {
+    button: {
+      textTransform: "capitalize",
+    },
+  },
 });

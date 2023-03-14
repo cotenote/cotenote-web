@@ -1,4 +1,4 @@
-import { SocialLoginButton } from "@/components/common/button";
+import { SocialLoginButton } from "@/components/common/button/index";
 import React from "react";
 import GithubIconSrc from "@/assets/images/github_icon.svg";
 

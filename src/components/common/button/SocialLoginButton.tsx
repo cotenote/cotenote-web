@@ -26,8 +26,8 @@ function SocialLoginButton({
       css={{ backgroundColor, ...css }}
       {...props}
     >
-      <Image src={iconSrc} width={40} height={40} alt={`${type}_icon`} />
-      {type}로 로그인
+      <Image src={iconSrc} width={30} height={30} alt={`${type}_icon`} />
+      {type} 로그인
     </StyledButton>
   );
 }
@@ -35,7 +35,7 @@ function SocialLoginButton({
 export default SocialLoginButton;
 
 const StyledButton = styled(BaseButton)`
-  width: 230px;
+  width: 185px;
   display: flex;
   justify-content: space-between;
 
