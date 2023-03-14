@@ -5,6 +5,7 @@ import styled from "styled-components";
 import BaseTextField from "../common/input/BaseTextField";
 import SearchIconSrc from "@/assets/images/search_icon.svg";
 import LogoSrc from "@/assets/images/logo.svg";
+
 function SearchInput() {
   return (
     <SearchInputWrapper>

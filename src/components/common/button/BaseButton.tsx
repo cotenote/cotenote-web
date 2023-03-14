@@ -2,7 +2,7 @@ import React from "react";
 import Button, { ButtonProps } from "@mui/material/Button";
 import styled, { CSSObject } from "styled-components";
 
-interface BaseButtonProps {
+export interface BaseButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   css?: CSSObject;
