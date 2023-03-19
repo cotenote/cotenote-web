@@ -1,14 +1,13 @@
-import BaseButton from "@/components/common/button/BaseButton";
+import { BaseButton } from "@/components/common/button";
 import React from "react";
 import styled from "styled-components";
+import LoginButton from "./LoginButton";
 
 function Header() {
   return (
     <HeaderWrapper>
       <StyledHeader>
-        <BaseButton className="login_button" variant="contained">
-          로그인 하기
-        </BaseButton>
+        <LoginButton />
       </StyledHeader>
     </HeaderWrapper>
   );
