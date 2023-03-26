@@ -1,8 +1,8 @@
-import BaseButton from "@/components/common/button/BaseButton";
 import { Dialog } from "@mui/material";
-import LogoSrc from "@/assets/images/logo.svg";
 import React from "react";
 import Image from "next/image";
+import LogoSrc from "@/assets/images/logo.svg";
+import BaseButton from "@/components/common/button/BaseButton";
 import { GoogleButton, GithubButton } from "@/components/layouts";
 
 function LoginButton() {

@@ -6,7 +6,7 @@ function GithubButton() {
   return (
     <SocialLoginButton
       iconSrc={GithubIconSrc}
-      backgroundColor={"#6e5494"}
+      backgroundColor="#6e5494"
       type="github"
     />
   );

@@ -1,8 +1,8 @@
+import Head from "next/head";
+import { ReactElement } from "react";
 import Container from "@/components/common/Container";
 import { SearchInput } from "@/components/home";
 import { Layout } from "@/layouts";
-import Head from "next/head";
-import { ReactElement } from "react";
 
 export default function Home() {
   return (

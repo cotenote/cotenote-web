@@ -1,6 +1,7 @@
 import { createTheme, Theme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
+  // eslint-disable-next-line no-unused-vars
   interface BreakpointOverrides {
     xs: false; // removes the `xs` breakpoint
     sm: false;

@@ -12,7 +12,8 @@ import "@/styles/globals.css";
 import "@/styles/miniReset.css";
 import "@/styles/font.css";
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
+  // eslint-disable-next-line no-unused-vars
   getLayout?: (page: ReactElement) => ReactNode;
 };
 
@@ -26,9 +27,10 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   useEffect(() => {
     function handleResize() {
       const body = document.querySelector("body") ?? document.body;
-      body.style.height = window.innerHeight + "px";
+      body.style.height = `${window.innerHeight}px`;
     }
     handleResize();
+
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);

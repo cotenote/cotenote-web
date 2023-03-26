@@ -10,11 +10,11 @@ type BaseTextFieldProps = OutlinedInputProps & {
   endAdornment?: ReactNode;
 };
 
-const BaseTextField = ({
+function BaseTextField({
   placeholder,
   endAdornment,
   ...inputProps
-}: BaseTextFieldProps) => {
+}: BaseTextFieldProps) {
   return (
     <StyledTextField
       placeholder={placeholder}
@@ -26,7 +26,7 @@ const BaseTextField = ({
       {...inputProps}
     />
   );
-};
+}
 
 export default BaseTextField;
 

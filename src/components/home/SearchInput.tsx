@@ -2,9 +2,9 @@ import { ButtonBase } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
-import BaseTextField from "../common/input/BaseTextField";
 import SearchIconSrc from "@/assets/images/search_icon.svg";
 import LogoSrc from "@/assets/images/logo.svg";
+import BaseTextField from "../common/input/BaseTextField";
 
 function SearchInput() {
   return (
@@ -18,14 +18,14 @@ function SearchInput() {
         priority
       />
       <StyledTextField
-        placeholder={"검색어를 입력하세요"}
+        placeholder="검색어를 입력하세요"
         endAdornment={
           <ButtonBase>
             <Image
               src={SearchIconSrc}
               width={25}
               height={25}
-              alt={"search_icon"}
+              alt="search_icon"
             />
           </ButtonBase>
         }
