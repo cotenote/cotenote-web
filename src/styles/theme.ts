@@ -1,38 +1,22 @@
-import { createTheme, Theme } from "@mui/material/styles";
+import { extendTheme } from "@chakra-ui/react";
 
-declare module "@mui/material/styles" {
-  // eslint-disable-next-line no-unused-vars
-  interface BreakpointOverrides {
-    xs: false; // removes the `xs` breakpoint
-    sm: false;
-    md: false;
-    lg: false;
-    xl: false;
-    mobile: true; // adds the `mobile` breakpoint
-    tablet: true;
-    desktop: true;
-  }
-}
-
-export const theme: Theme = createTheme({
-  palette: {
+export const theme = extendTheme({
+  colors: {
     primary: {
-      main: "#59d58b",
+      100: "#9be6b9",
+      200: "#8be2ae",
+      300: "#7adda2",
+      400: "#6ad997",
+      500: "#59d58b", // main
+      600: "#50c07d",
+      700: "#47aa6f",
+      800: "#3e9561",
+      900: "#358053",
     },
+    white: "#ffffff",
+    black: "#191c19",
   },
-  shape: {
-    borderRadius: 8,
-  },
-  breakpoints: {
-    values: {
-      mobile: 0,
-      tablet: 640,
-      desktop: 1200,
-    },
-  },
-  typography: {
-    button: {
-      textTransform: "capitalize",
-    },
+  header: {
+    maxWidth: "1024px",
   },
 });

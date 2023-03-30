@@ -1,8 +1,22 @@
 :root {
+      --P-50: #fff5f5;
+      --P-100: #ffdbdb;
+      --P-200: #ffc2c2;
+      --P-300: #ffa8a8;
+      --P-400: #ff8f8f;
+      --P-500: #ff5c5c;
+      --P-600: #ff2929;
+      --P-700: #db0000;
+      --P-800: #a80000;
+      --P-900: #750000;
+
   --primary: #59d58b;
   --secondary: #f5fff4;
 
   --button-pseudo-class: #1ba561cc;
+
+  --google :#db4437;
+  --github :#6e5494;
 
   --white: #ffffff;
   --black: #191c19;

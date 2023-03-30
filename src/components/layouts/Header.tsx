@@ -1,13 +1,17 @@
+import { Box, Button, Flex, IconButton } from "@chakra-ui/react";
+import { TimeIcon } from "@chakra-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { LoginButton } from ".";
 
 function Header() {
   return (
     <HeaderWrapper>
-      <StyledHeader>
-        <LoginButton />
-      </StyledHeader>
+      <Box as="header" width="100%" margin="0 auto" padding={10} maxW={1024}>
+        <Flex float="right" gap="15px">
+          <IconButton aria-label="hi" icon={<TimeIcon />} />
+          <Button size="md">로그인</Button>
+        </Flex>
+      </Box>
     </HeaderWrapper>
   );
 }
@@ -27,18 +31,4 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: right;
-
-  .login_button {
-    float: right;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.values.tablet}px) {
-    border-bottom: none;
-  }
-`;
-const StyledHeader = styled.header`
-  width: 100%;
-  max-width: var(--header-max-width);
-  padding: 0 var(--mobile-padding);
-
-  margin: 0 auto;
 `;
