@@ -1,3 +1,5 @@
+"use client";
+
 import "@/styles/globals.css";
 import "@/styles/miniReset.css";
 import "@/styles/font.css";
