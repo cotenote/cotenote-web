@@ -1,4 +1,3 @@
-import { theme } from "@/theme";
 import { Box, Button, Flex } from "@chakra-ui/react";
 
 import React from "react";
@@ -11,8 +10,7 @@ function Header() {
         as="header"
         width="100%"
         margin="0 auto"
-        padding={10}
-        maxW={theme.header.maxWidth}
+        maxW="var(--header-max-width)"
       >
         <Flex float="right" gap="15px">
           {/* <IconButton

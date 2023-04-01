@@ -6,7 +6,6 @@ import { Flex } from "@chakra-ui/react";
 
 import LogoSrc from "@/assets/images/logo.svg";
 import Image from "next/image";
-import { theme } from "@/theme";
 
 export default function Home() {
   return (
@@ -23,7 +22,7 @@ export default function Home() {
         justifyContent="center"
         gap="40px"
         margin="0 auto"
-        padding={theme.padding.mobileGap}
+        padding="var(--mobile-gap)"
       >
         <Image
           style={{ paddingTop: "30vh" }}
