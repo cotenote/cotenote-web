@@ -30,9 +30,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@chakra-ui/icon", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:3.0.16"],\
             ["@chakra-ui/icons", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.0.17"],\
-            ["@chakra-ui/next-js", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.1.1"],\
             ["@chakra-ui/react", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.5.5"],\
             ["@chakra-ui/system", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.5.4"],\
+            ["@emotion/cache", "npm:11.10.5"],\
             ["@emotion/react", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:11.10.6"],\
             ["@emotion/styled", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:11.10.6"],\
             ["@next/font", "npm:13.1.6"],\
@@ -1734,41 +1734,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react",\
             "framer-motion",\
             "react-dom",\
-            "react"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@chakra-ui/next-js", [\
-        ["npm:2.1.1", {\
-          "packageLocation": "./.yarn/cache/@chakra-ui-next-js-npm-2.1.1-f19c788b60-58e427be1b.zip/node_modules/@chakra-ui/next-js/",\
-          "packageDependencies": [\
-            ["@chakra-ui/next-js", "npm:2.1.1"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.1.1", {\
-          "packageLocation": "./.yarn/__virtual__/@chakra-ui-next-js-virtual-7f1de7d3d7/0/cache/@chakra-ui-next-js-npm-2.1.1-f19c788b60-58e427be1b.zip/node_modules/@chakra-ui/next-js/",\
-          "packageDependencies": [\
-            ["@chakra-ui/next-js", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.1.1"],\
-            ["@chakra-ui/react", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.5.5"],\
-            ["@emotion/cache", "npm:11.10.5"],\
-            ["@emotion/react", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:11.10.6"],\
-            ["@types/chakra-ui__react", null],\
-            ["@types/emotion__react", null],\
-            ["@types/next", null],\
-            ["@types/react", "npm:18.0.28"],\
-            ["next", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:13.1.6"],\
-            ["react", "npm:18.2.0"]\
-          ],\
-          "packagePeers": [\
-            "@chakra-ui/react",\
-            "@emotion/react",\
-            "@types/chakra-ui__react",\
-            "@types/emotion__react",\
-            "@types/next",\
-            "@types/react",\
-            "next",\
             "react"\
           ],\
           "linkType": "HARD"\
@@ -5764,9 +5729,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cotenote-web", "workspace:."],\
             ["@chakra-ui/icon", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:3.0.16"],\
             ["@chakra-ui/icons", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.0.17"],\
-            ["@chakra-ui/next-js", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.1.1"],\
             ["@chakra-ui/react", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.5.5"],\
             ["@chakra-ui/system", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:2.5.4"],\
+            ["@emotion/cache", "npm:11.10.5"],\
             ["@emotion/react", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:11.10.6"],\
             ["@emotion/styled", "virtual:769d7b40e482486a20a0164bc0aa342a34604e83dbee157cceb6783ba94745f4251eea7570cff8c27d9bf5d5ed2a5657aedb68538f859ee560da5e2e9dd5b574#npm:11.10.6"],\
             ["@next/font", "npm:13.1.6"],\

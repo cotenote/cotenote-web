@@ -6,6 +6,8 @@ import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { ReactElement, ReactNode, useEffect } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
 import { theme } from "@/theme";
 
 type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
@@ -16,6 +18,11 @@ type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
+
+const emotionCache = createCache({
+  key: "emotion-css-cache",
+  prepend: true,
+});
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -34,8 +41,10 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   }, []);
 
   return (
-    <ChakraProvider theme={theme}>
-      {getLayout(<Component {...pageProps} />)}
-    </ChakraProvider>
+    <CacheProvider value={emotionCache}>
+      <ChakraProvider theme={theme}>
+        {getLayout(<Component {...pageProps} />)}
+      </ChakraProvider>
+    </CacheProvider>
   );
 }
