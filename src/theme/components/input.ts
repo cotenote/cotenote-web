@@ -1,5 +1,26 @@
+const focus = {
+  borderColor: "var(--primary-500)",
+  boxShadow: "0 0 0 1px var(--primary-500)",
+};
+
 const Input = {
-  // Input에 대한 테마 설정
+  variants: {
+    outline: {
+      field: {
+        _focus: focus,
+      },
+    },
+    filled: {
+      field: {
+        _focus: focus,
+      },
+    },
+    flushed: {
+      field: {
+        _focus: focus,
+      },
+    },
+  },
 };
 
 export default Input;
