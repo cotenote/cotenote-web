@@ -1,4 +1,4 @@
-import { Footer, Header } from "@/components/layouts";
+import { Header } from "@/components/layouts";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,7 +7,6 @@ function Layout({ children }: { children: React.ReactNode }) {
     <StyledMain>
       <Header />
       {children}
-      <Footer />
     </StyledMain>
   );
 }
