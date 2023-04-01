@@ -1,19 +1,14 @@
 import { Header } from "@/components/layouts";
+import { Box } from "@chakra-ui/react";
 import React from "react";
-import styled from "styled-components";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <StyledMain>
+    <Box as="main" w="100%" h="100vh">
       <Header />
       {children}
-    </StyledMain>
+    </Box>
   );
 }
 
 export default Layout;
-
-const StyledMain = styled.main`
-  width: 100%;
-  height: calc(100vh);
-`;
