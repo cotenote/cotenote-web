@@ -11,6 +11,7 @@ function Header() {
         width="100%"
         margin="0 auto"
         maxW="var(--header-max-width)"
+        padding="var(--mobile-gap)"
       >
         <Flex float="right" gap="15px">
           {/* <IconButton
