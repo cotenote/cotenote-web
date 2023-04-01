@@ -1,5 +1,3 @@
-"use client";
-
 import "@/styles/globals.css";
 import "@/styles/miniReset.css";
 import "@/styles/font.css";
@@ -7,7 +5,6 @@ import "@/styles/font.css";
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { ReactElement, ReactNode, useEffect } from "react";
-import { CacheProvider } from "@chakra-ui/next-js";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "@/theme";
 
@@ -37,10 +34,8 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   }, []);
 
   return (
-    <CacheProvider>
-      <ChakraProvider theme={theme}>
-        {getLayout(<Component {...pageProps} />)}
-      </ChakraProvider>
-    </CacheProvider>
+    <ChakraProvider theme={theme}>
+      {getLayout(<Component {...pageProps} />)}
+    </ChakraProvider>
   );
 }
