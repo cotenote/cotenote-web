@@ -3,9 +3,10 @@ import { ReactElement } from "react";
 import { SearchInput } from "@/components/home";
 import { Layout } from "@/layouts";
 import { Flex } from "@chakra-ui/react";
-import { theme } from "@/styles/theme";
+
 import LogoSrc from "@/assets/images/logo.svg";
 import Image from "next/image";
+import { theme } from "@/theme";
 
 export default function Home() {
   return (

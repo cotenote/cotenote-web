@@ -1,5 +1,6 @@
+import { theme } from "@/theme";
 import { Box, Button, Flex } from "@chakra-ui/react";
-import { theme } from "@/styles/theme";
+
 import React from "react";
 import styled from "styled-components";
 

@@ -7,7 +7,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import "@/styles/globals.css";
 import "@/styles/miniReset.css";
 import "@/styles/font.css";
-import { theme } from "@/styles/theme";
+import { theme } from "@/theme";
 
 type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
   // eslint-disable-next-line no-unused-vars
