@@ -12,7 +12,7 @@
   src: url("../assets/fonts/Spoqa-Han-Sans-Light.woff");
 }
 
-* {
+body {
   font-family: "Spoqa-Han-Sans-Regular", "Spoqa-Han-Sans-Bold",
     "Spoqa-Han-Sans-Light";
-}
+} 

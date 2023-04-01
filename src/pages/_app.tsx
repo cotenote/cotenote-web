@@ -1,12 +1,12 @@
+import "@/styles/globals.css";
+import "@/styles/miniReset.css";
+import "@/styles/font.css";
+
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { ReactElement, ReactNode, useEffect } from "react";
 import { CacheProvider } from "@chakra-ui/next-js";
 import { ChakraProvider } from "@chakra-ui/react";
-
-import "@/styles/globals.css";
-import "@/styles/miniReset.css";
-import "@/styles/font.css";
 import { theme } from "@/theme";
 
 type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
