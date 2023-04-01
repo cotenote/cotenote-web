@@ -19,4 +19,7 @@ export const theme = extendTheme({
   header: {
     maxWidth: "1024px",
   },
+  padding: {
+    mobileGap: "var(--mobile-padding)",
+  },
 });

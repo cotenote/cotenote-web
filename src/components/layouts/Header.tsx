@@ -1,14 +1,24 @@
-import { Box, Button, Flex, IconButton } from "@chakra-ui/react";
-import { TimeIcon } from "@chakra-ui/icons";
+import { Box, Button, Flex } from "@chakra-ui/react";
+import { theme } from "@/styles/theme";
 import React from "react";
 import styled from "styled-components";
 
 function Header() {
   return (
     <HeaderWrapper>
-      <Box as="header" width="100%" margin="0 auto" padding={10} maxW={1024}>
+      <Box
+        as="header"
+        width="100%"
+        margin="0 auto"
+        padding={10}
+        maxW={theme.header.maxWidth}
+      >
         <Flex float="right" gap="15px">
-          <IconButton aria-label="hi" icon={<TimeIcon />} />
+          {/* <IconButton
+            aria-label="timer"
+            backgroundColor="primary.500"
+            icon={<TimeIcon />}
+          /> */}
           <Button size="md">로그인</Button>
         </Flex>
       </Box>
