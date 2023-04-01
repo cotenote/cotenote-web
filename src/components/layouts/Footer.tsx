@@ -35,14 +35,6 @@ const StyledFooter = styled.footer`
   justify-content: space-between;
 
   margin: auto;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.values.tablet}px) {
-    justify-content: right;
-
-    & p:first-of-type {
-      display: none;
-    }
-  }
 `;
 
 const Pen = styled(Image)`

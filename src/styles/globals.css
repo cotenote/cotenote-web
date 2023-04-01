@@ -1,8 +1,19 @@
 :root {
-  --primary: #59d58b;
-  --secondary: #f5fff4;
+  --primary-100 : #9be6b9;
+  --primary-200 : #8be2ae;
+  --primary-300 : #7adda2;
+  --primary-400 : #6ad997;
+  --primary-500 : #59d58b;
+  --primary-600 : #50c07d;
+  --primary-700 : #47aa6f;
+  --primary-800 : #3e9561; 
+  --primary-900 : #358053;
+      
 
   --button-pseudo-class: #1ba561cc;
+
+  --google :#db4437;
+  --github :#6e5494;
 
   --white: #ffffff;
   --black: #191c19;
@@ -18,14 +29,12 @@
   --header-height: 64px;
   --footer-height: 46px;
 
-  --mobile-padding: 15px;
-  --footer-padding: 25px;
+  --mobile-gap: 15px;
 
   --one-point-five: 0.09375em;
   --zero-point-five: 0.031em;
 
-  --header-max-width: 1256px;
-  --footer-max-width: 1256px;
+  --header-max-width: 1024px;
 }
 .body01 {
   font-family: "Spoqa Han Sans Neo";

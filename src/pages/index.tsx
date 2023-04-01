@@ -1,8 +1,11 @@
 import Head from "next/head";
 import { ReactElement } from "react";
-import Container from "@/components/common/Container";
 import { SearchInput } from "@/components/home";
 import { Layout } from "@/layouts";
+import { Flex } from "@chakra-ui/react";
+
+import LogoSrc from "@/assets/images/logo.svg";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,9 +16,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
+      <Flex
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        gap="40px"
+        margin="0 auto"
+        padding="var(--mobile-gap)"
+      >
+        <Image
+          style={{ paddingTop: "30vh" }}
+          className="main_logo"
+          src={LogoSrc}
+          width={270}
+          height={39}
+          alt="logo"
+          priority
+        />
         <SearchInput />
-      </Container>
+      </Flex>
     </>
   );
 }
