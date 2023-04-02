@@ -7,6 +7,7 @@ const Input = {
   variants: {
     outline: {
       field: {
+        borderColor: "var(--chakra-colors-gray-200)",
         _focus: focus,
       },
     },

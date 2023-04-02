@@ -13,7 +13,7 @@ function Header() {
         as="header"
         width="100%"
         margin="0 auto"
-        maxW="var(--header-max-width)"
+        // maxW="var(--header-max-width)"
         padding="10px var(--mobile-gap)"
       >
         <Flex float="right" gap="15px">
