@@ -9,6 +9,9 @@ const Input = {
       field: {
         borderColor: "var(--chakra-colors-gray-200)",
         _focus: focus,
+        _placeholder: {
+          color: "var(--chakra-colors-gray-500)",
+        },
       },
     },
     filled: {
