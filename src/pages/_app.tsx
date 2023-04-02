@@ -1,13 +1,10 @@
 import "@/styles/globals.css";
 import "@/styles/miniReset.css";
-import "@/styles/font.css";
 
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { ReactElement, ReactNode, useEffect } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import createCache from "@emotion/cache";
-import { CacheProvider } from "@emotion/react";
 import { theme } from "@/theme";
 
 type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
@@ -19,7 +16,6 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-const emotionCache = createCache({
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);
 
