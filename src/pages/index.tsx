@@ -3,8 +3,6 @@ import { ReactElement } from "react";
 import { SearchInput } from "@/components/home";
 import { Layout } from "@/layouts";
 import { Flex } from "@chakra-ui/react";
-
-import LogoSrc from "@/assets/images/logo.svg";
 import Image from "next/image";
 
 export default function Home() {
@@ -27,7 +25,7 @@ export default function Home() {
         <Image
           style={{ paddingTop: "30vh" }}
           className="main_logo"
-          src={LogoSrc}
+          src="/assets/images/logo.svg"
           width={270}
           height={39}
           alt="logo"
