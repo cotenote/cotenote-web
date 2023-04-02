@@ -20,10 +20,6 @@ type AppPropsWithLayout = AppProps & {
 };
 
 const emotionCache = createCache({
-  key: "emotion-css-cache",
-  prepend: true,
-});
-
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);
 
@@ -41,10 +37,8 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   }, []);
 
   return (
-    <CacheProvider value={emotionCache}>
-      <ChakraProvider theme={theme}>
-        {getLayout(<Component {...pageProps} />)}
-      </ChakraProvider>
-    </CacheProvider>
+    <ChakraProvider theme={theme}>
+      {getLayout(<Component {...pageProps} />)}
+    </ChakraProvider>
   );
 }
