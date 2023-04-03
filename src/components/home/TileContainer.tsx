@@ -10,7 +10,7 @@ function TileContainer() {
       gridTemplateColumns="1fr 1fr 1fr"
       gap={["60px", "70px", "75px", "80px"]}
     >
-      <Tile title="타이머" icon={<TimeIcon />} />
+      <Tile title="타이머" icon={<TimeIcon />} href="/timer" />
       <Tile title="모의고사" icon={<EditIcon />} />
       <Tile title="오답노트" icon={<CheckIcon />} />
     </Grid>
