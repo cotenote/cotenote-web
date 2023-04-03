@@ -13,15 +13,9 @@ function Header() {
         as="header"
         width="100%"
         margin="0 auto"
-        // maxW="var(--header-max-width)"
         padding="10px var(--mobile-gap)"
       >
         <Flex float="right" gap="15px">
-          {/* <IconButton
-            aria-label="timer"
-            backgroundColor="primary.500"
-            icon={<TimeIcon />}
-          /> */}
           <Button size="md">로그인</Button>
         </Flex>
       </Box>

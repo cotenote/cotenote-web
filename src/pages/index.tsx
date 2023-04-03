@@ -4,6 +4,7 @@ import { SearchInput } from "@/components/home";
 import { Layout } from "@/layouts";
 import { Flex } from "@chakra-ui/react";
 import Image from "next/image";
+import TileContainer from "@/components/home/TileContainer";
 
 export default function Home() {
   return (
@@ -23,15 +24,16 @@ export default function Home() {
         padding="var(--mobile-gap)"
       >
         <Image
-          style={{ paddingTop: "30vh" }}
+          style={{ paddingTop: "28vh" }}
           className="main_logo"
           src="/assets/images/logo.svg"
-          width={270}
+          width={300}
           height={39}
           alt="logo"
           priority
         />
         <SearchInput />
+        <TileContainer />
       </Flex>
     </>
   );
