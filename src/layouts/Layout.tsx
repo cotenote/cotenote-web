@@ -6,6 +6,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Box as="main" w="100%" h="100vh">
       <Header />
+      <Box height="var(--header-height)" />
       {children}
     </Box>
   );

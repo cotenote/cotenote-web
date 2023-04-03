@@ -24,7 +24,7 @@ export default function Home() {
         padding="var(--mobile-gap)"
       >
         <Image
-          style={{ paddingTop: "28vh" }}
+          style={{ paddingTop: "20vh" }}
           className="main_logo"
           src="/assets/images/logo.svg"
           width={300}

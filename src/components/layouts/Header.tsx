@@ -5,6 +5,7 @@ function Header() {
   return (
     <Flex
       width="100%"
+      height="var(--header-height)"
       borderBottom="var(--zero-point-five) solid #c5c7c2"
       position="fixed"
       zIndex="var(--header-z-index)"
