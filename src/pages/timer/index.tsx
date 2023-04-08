@@ -1,10 +1,14 @@
 import { Layout } from "@/layouts";
 import { Box } from "@chakra-ui/react";
-
+import { Select } from "chakra-react-select";
 import React, { ReactElement } from "react";
 
 function Timer() {
-  return <Box>Timer</Box>;
+  return (
+    <Box>
+      <Select />
+    </Box>
+  );
 }
 
 export default Timer;
