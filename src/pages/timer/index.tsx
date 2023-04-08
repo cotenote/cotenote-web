@@ -1,18 +1,24 @@
 import { Layout } from "@/layouts";
-import { Box } from "@chakra-ui/react";
-import { Select } from "chakra-react-select";
+import { Flex } from "@chakra-ui/react";
 import React, { ReactElement } from "react";
+import { Timer } from "@/components/timer";
 
-function Timer() {
+function TimerPage() {
   return (
-    <Box>
-      <Select />
-    </Box>
+    <Flex
+      paddingTop="100px"
+      flexDir="column"
+      width="400px"
+      margin="0 auto"
+      gap="30px"
+    >
+      <Timer />
+    </Flex>
   );
 }
 
-export default Timer;
+export default TimerPage;
 
-Timer.getLayout = function getLayout(page: ReactElement) {
+TimerPage.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };
