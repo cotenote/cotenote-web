@@ -1,24 +1,50 @@
-"useClient";
-
 import React, { useState } from "react";
 import { Box, Flex } from "@chakra-ui/react";
-import { ActionButtons, TimeSelect } from "@/components/timer";
-import { hourOptions, minOptions } from "@/constants/timer";
+import { ActionButtons, TimerSelect } from "@/components/timer";
+import { hourOptions, secAndMinOptions } from "@/constants/timer";
 
 function Timer() {
   const [isRunning, setIsRunning] = useState(false);
-  //   const [time, setTime] = useState({ hour: 0, min: 0, sec: 0 });
+  const [hour, setHour] = useState({ label: "00", value: 0 });
+  const [min, setMin] = useState({ label: "00", value: 0 });
+  const [sec, setSec] = useState({ label: "00", value: 0 });
 
   return (
     <>
       <Flex gap="10px" margin="0 auto">
         {isRunning ? (
-          <Box>1:11:11</Box>
+          <Box>
+            {hour.label}:{min.label}:{sec.label}
+          </Box>
         ) : (
           <>
-            <TimeSelect label="시간" options={hourOptions} />
-            <TimeSelect label="분" options={minOptions} />
-            <TimeSelect label="초" options={minOptions} />
+            <TimerSelect
+              onChange={(newValue) => {
+                if (!newValue) return;
+                setHour(newValue);
+              }}
+              label="시간"
+              value={hour}
+              options={hourOptions}
+            />
+            <TimerSelect
+              onChange={(newValue) => {
+                if (!newValue) return;
+                setMin(newValue);
+              }}
+              label="분"
+              value={min}
+              options={secAndMinOptions}
+            />
+            <TimerSelect
+              onChange={(newValue) => {
+                if (!newValue) return;
+                setSec(newValue);
+              }}
+              label="초"
+              value={sec}
+              options={secAndMinOptions}
+            />
           </>
         )}
       </Flex>
