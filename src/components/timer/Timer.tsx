@@ -1,51 +1,36 @@
 import React, { useState } from "react";
-import { Box, Flex } from "@chakra-ui/react";
-import { ActionButtons, TimerSelect } from "@/components/timer";
+import { Flex } from "@chakra-ui/react";
+import { TimerCounter, ActionButtons } from "@/components/timer";
+
 import { hourOptions, secAndMinOptions } from "@/constants/timer";
+import SelectContainer from "./SelectContainer";
+
+export interface TimerOption {
+  label: string;
+  value: number;
+}
+
+export interface Time {
+  hour: TimerOption;
+  min: TimerOption;
+  sec: TimerOption;
+}
 
 function Timer() {
   const [isRunning, setIsRunning] = useState(false);
-  const [hour, setHour] = useState({ label: "00", value: 0 });
-  const [min, setMin] = useState({ label: "00", value: 0 });
-  const [sec, setSec] = useState({ label: "00", value: 0 });
+  const [time, setTime] = useState<Time>({
+    hour: hourOptions[0],
+    min: secAndMinOptions[0],
+    sec: secAndMinOptions[0],
+  });
 
   return (
     <>
       <Flex gap="10px" margin="0 auto">
         {isRunning ? (
-          <Box>
-            {hour.label}:{min.label}:{sec.label}
-          </Box>
+          <TimerCounter time={time} />
         ) : (
-          <>
-            <TimerSelect
-              onChange={(newValue) => {
-                if (!newValue) return;
-                setHour(newValue);
-              }}
-              label="시간"
-              value={hour}
-              options={hourOptions}
-            />
-            <TimerSelect
-              onChange={(newValue) => {
-                if (!newValue) return;
-                setMin(newValue);
-              }}
-              label="분"
-              value={min}
-              options={secAndMinOptions}
-            />
-            <TimerSelect
-              onChange={(newValue) => {
-                if (!newValue) return;
-                setSec(newValue);
-              }}
-              label="초"
-              value={sec}
-              options={secAndMinOptions}
-            />
-          </>
+          <SelectContainer time={time} setTime={setTime} />
         )}
       </Flex>
       <ActionButtons isRunning={isRunning} setIsRunning={setIsRunning} />

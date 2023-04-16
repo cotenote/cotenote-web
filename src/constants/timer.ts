@@ -1,5 +1,9 @@
 export const hourOptions = [
   {
+    label: "00",
+    value: 0,
+  },
+  {
     label: "01",
     value: 1,
   },
@@ -50,6 +54,10 @@ export const hourOptions = [
 ];
 
 export const secAndMinOptions = [
+  {
+    label: "00",
+    value: 0,
+  },
   {
     label: "01",
     value: 1,
@@ -285,9 +293,5 @@ export const secAndMinOptions = [
   {
     label: "59",
     value: 59,
-  },
-  {
-    label: "60",
-    value: 60,
   },
 ];
