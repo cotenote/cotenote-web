@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { ReactElement } from "react";
-import { SearchInput } from "@/components/home";
-import { Layout } from "@/layouts";
+
+import { MainLayout } from "@/layouts";
 import { Flex } from "@chakra-ui/react";
-import Image from "next/image";
 import TileContainer from "@/components/home/TileContainer";
+import { Logo, SearchInput } from "@/components/common";
 
 export default function Home() {
   return (
@@ -20,18 +20,10 @@ export default function Home() {
         alignItems="center"
         justifyContent="center"
         gap="40px"
-        margin="0 auto"
-        padding="var(--mobile-gap)"
+        margin="auto"
+        padding="20vh var(--mobile-gap) 0"
       >
-        <Image
-          style={{ paddingTop: "20vh" }}
-          className="main_logo"
-          src="/assets/images/logo.svg"
-          width={300}
-          height={39}
-          alt="logo"
-          priority
-        />
+        <Logo width={300} height={39.58} />
         <SearchInput />
         <TileContainer />
       </Flex>
@@ -40,5 +32,5 @@ export default function Home() {
 }
 
 Home.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
+  return <MainLayout>{page}</MainLayout>;
 };

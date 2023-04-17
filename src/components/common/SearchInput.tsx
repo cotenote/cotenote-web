@@ -2,7 +2,7 @@ import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 
 function SearchInput() {
   return (
-    <InputGroup height="44px" maxWidth={560}>
+    <InputGroup height="44px" minWidth={320} maxWidth={560}>
       <Input
         height="44px"
         paddingRight="71px"
