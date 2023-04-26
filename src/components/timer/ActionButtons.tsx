@@ -5,10 +5,19 @@ import React from "react";
 interface ActionButtonsProps {
   isRunning: boolean;
   setIsRunning: React.Dispatch<React.SetStateAction<boolean>>;
+  isPaused: boolean;
+  setIsPaused: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function ActionButtons({ isRunning, setIsRunning }: ActionButtonsProps) {
-  const handleClickPauseButton = () => {};
+function ActionButtons({
+  isRunning,
+  setIsRunning,
+  isPaused,
+  setIsPaused,
+}: ActionButtonsProps) {
+  const handleClickPauseButton = () => {
+    setIsPaused((prev) => !prev);
+  };
 
   const handleClickCancelButton = () => {
     setIsRunning(false);
@@ -28,7 +37,7 @@ function ActionButtons({ isRunning, setIsRunning }: ActionButtonsProps) {
           background="var(--primary-500)"
           onClick={handleClickPauseButton}
         >
-          일시정지
+          {isPaused ? "재개" : "일시정지"}
         </Button>
       ) : (
         <Button

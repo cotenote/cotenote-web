@@ -18,7 +18,8 @@ export interface Time {
 }
 
 function Timer() {
-  const [isRunning, setIsRunning] = useState(false);
+  const [isRunning, setIsRunning] = useState<boolean>(false);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
   const [time, setTime] = useState<Time>({
     hour: hourOptions[0],
     min: secAndMinOptions[0],
@@ -28,6 +29,10 @@ function Timer() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setTime((prevTime) => {
+        if (!isRunning || isPaused) {
+          clearInterval(intervalId);
+          return prevTime;
+        }
         let hour = prevTime.hour.value;
         let min = prevTime.min.value;
         let sec = prevTime.sec.value;
@@ -67,7 +72,7 @@ function Timer() {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [time]);
+  }, [isPaused, isRunning, time]);
 
   return (
     <>
@@ -88,7 +93,12 @@ function Timer() {
           <SelectContainer time={time} setTime={setTime} />
         )}
       </Flex>
-      <ActionButtons isRunning={isRunning} setIsRunning={setIsRunning} />
+      <ActionButtons
+        isRunning={isRunning}
+        setIsRunning={setIsRunning}
+        isPaused={isPaused}
+        setIsPaused={setIsPaused}
+      />
     </>
   );
 }
