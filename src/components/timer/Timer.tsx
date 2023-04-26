@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Flex } from "@chakra-ui/react";
 import { TimerCounter, ActionButtons } from "@/components/timer";
 
@@ -25,6 +25,50 @@ function Timer() {
     sec: secAndMinOptions[0],
   });
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime((prevTime) => {
+        let hour = prevTime.hour.value;
+        let min = prevTime.min.value;
+        let sec = prevTime.sec.value;
+
+        if (sec === 0) {
+          if (min === 0) {
+            if (hour === 0) {
+              clearInterval(intervalId);
+              return prevTime;
+            }
+            hour--;
+            min = 59;
+            sec = 59;
+          } else {
+            min--;
+            sec = 59;
+          }
+        } else {
+          sec--;
+        }
+
+        return {
+          hour: {
+            label: hour.toString().padStart(2, "0"),
+            value: hour,
+          },
+          min: {
+            label: min.toString().padStart(2, "0"),
+            value: min,
+          },
+          sec: {
+            label: sec.toString().padStart(2, "0"),
+            value: sec,
+          },
+        };
+      });
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [time]);
+
   return (
     <>
       <Head>
@@ -39,7 +83,7 @@ function Timer() {
       </Head>
       <Flex gap="10px" margin="0 auto">
         {isRunning ? (
-          <TimerCounter time={time} />
+          <TimerCounter time={time} setTime={setTime} isRunning={isRunning} />
         ) : (
           <SelectContainer time={time} setTime={setTime} />
         )}
