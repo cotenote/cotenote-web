@@ -1,26 +1,14 @@
 import { Box } from "@chakra-ui/layout";
-import React, { useEffect } from "react";
-import { Time, TimerOption } from "./Timer";
+import React from "react";
+import { Time } from "./Timer";
 
 interface TimerCounterProps {
   time: Time;
-  setTime: React.Dispatch<React.SetStateAction<Time>>;
-  isRunning: boolean;
 }
 
-function TimerCounter({ time, setTime, isRunning }: TimerCounterProps) {
-  useEffect(() => {
-    let intervalId: NodeJS.Timeout;
-
-    if (isRunning) {
-      intervalId = setInterval(() => {}, 1000);
-    }
-
-    return () => clearInterval(intervalId);
-  }, [isRunning]);
-
+function TimerCounter({ time }: TimerCounterProps) {
   return (
-    <Box>
+    <Box fontSize="4xl">
       {time.hour.label}:{time.min.label}:{time.sec.label}
     </Box>
   );

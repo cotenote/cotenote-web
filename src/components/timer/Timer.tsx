@@ -88,7 +88,7 @@ function Timer() {
       </Head>
       <Flex gap="10px" margin="0 auto">
         {isRunning ? (
-          <TimerCounter time={time} setTime={setTime} isRunning={isRunning} />
+          <TimerCounter time={time} />
         ) : (
           <SelectContainer time={time} setTime={setTime} />
         )}
