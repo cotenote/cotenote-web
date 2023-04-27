@@ -43,15 +43,15 @@ function Timer() {
               clearInterval(intervalId);
               return prevTime;
             }
-            hour--;
+            hour -= 1;
             min = 59;
             sec = 59;
           } else {
-            min--;
+            min -= 1;
             sec = 59;
           }
         } else {
-          sec--;
+          sec -= 1;
         }
 
         return {
