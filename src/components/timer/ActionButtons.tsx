@@ -28,7 +28,7 @@ function ActionButtons({
   };
 
   return (
-    <Flex gap="15px" margin="0 auto">
+    <Flex gap="15px" m="0 auto">
       <Button isDisabled={!isRunning} onClick={handleClickCancelButton}>
         취소
       </Button>

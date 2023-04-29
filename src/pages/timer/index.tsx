@@ -5,13 +5,7 @@ import { Timer } from "@/components/timer";
 
 function TimerPage() {
   return (
-    <Flex
-      paddingTop="100px"
-      flexDir="column"
-      width="400px"
-      margin="0 auto"
-      gap="30px"
-    >
+    <Flex paddingTop="100px" flexDir="column" w="400px" m="0 auto" gap="30px">
       <Timer />
     </Flex>
   );

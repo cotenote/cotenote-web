@@ -16,12 +16,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
+        p="20vh var(--mobile-gap) 0"
+        m="auto"
+        flexDir="column"
+        align="center"
+        justify="center"
         gap="40px"
-        margin="auto"
-        padding="20vh var(--mobile-gap) 0"
       >
         <Logo width={300} height={39.58} />
         <SearchInput />

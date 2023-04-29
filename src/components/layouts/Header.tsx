@@ -12,10 +12,10 @@ function Header() {
       height="var(--header-height)"
       p={{ base: "0 15px", md: "0 32px" }}
       borderBottom="var(--zero-point-five) solid #c5c7c2"
-      position="fixed"
+      pos="fixed"
       zIndex="var(--header-z-index)"
-      justifyContent="space-between"
-      alignItems="center"
+      justify="space-between"
+      align="center"
     >
       {isMobile ? (
         <Flex gap="10">

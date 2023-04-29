@@ -86,13 +86,7 @@ function Timer() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Flex
-        display="flex"
-        alignItems="center"
-        h="85px"
-        gap="10px"
-        margin="0 auto"
-      >
+      <Flex display="flex" alignItems="center" h="85px" gap="10px" m="0 auto">
         {isRunning ? (
           <TimerCounter time={time} />
         ) : (
