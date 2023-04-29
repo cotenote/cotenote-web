@@ -23,7 +23,6 @@ function Tile({ href, title, icon }: TitleProps) {
         w="50px"
         h="50px"
         borderRadius="100%"
-        backgroundColor="primary.500"
       />
       <Text as="span" fontSize="sm">
         {title}

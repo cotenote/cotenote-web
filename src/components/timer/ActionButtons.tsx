@@ -33,17 +33,11 @@ function ActionButtons({
         취소
       </Button>
       {isRunning ? (
-        <Button
-          background="var(--primary-500)"
-          onClick={handleClickPauseButton}
-        >
+        <Button variant="primary" onClick={handleClickPauseButton}>
           {isPaused ? "재개" : "일시정지"}
         </Button>
       ) : (
-        <Button
-          background="var(--primary-500)"
-          onClick={handleClickStartButton}
-        >
+        <Button variant="primary" onClick={handleClickStartButton}>
           시작
         </Button>
       )}
