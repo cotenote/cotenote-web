@@ -9,7 +9,9 @@ interface TimerCounterProps {
 function TimerCounter({ time }: TimerCounterProps) {
   return (
     <Box fontSize="4xl">
-      {time.hour.label}:{time.min.label}:{time.sec.label}
+      {time.hour.toString().padStart(2, "0")}:
+      {time.min.toString().padStart(2, "0")}:
+      {time.sec.toString().padStart(2, "0")}
     </Box>
   );
 }

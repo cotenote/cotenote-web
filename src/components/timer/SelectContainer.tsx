@@ -1,7 +1,8 @@
 import React from "react";
 import { TimerSelect } from "@/components/timer";
 import { hourOptions, secAndMinOptions } from "@/constants/timer";
-import { Time, TimerOption } from "./Timer";
+import { Time } from "./Timer";
+import { TimeSelectOption } from "./TimerSelect";
 
 interface SelectContainerProps {
   time: Time;
@@ -10,10 +11,10 @@ interface SelectContainerProps {
 
 function SelectContainer({ time, setTime }: SelectContainerProps) {
   const handleChangeTimerSelect =
-    (label: string) => (newValue: TimerOption | null) => {
+    (label: string) => (newValue: TimeSelectOption) => {
       if (!newValue) return;
       setTime((prev) => {
-        return { ...prev, [label]: newValue };
+        return { ...prev, [label]: newValue.value };
       });
     };
 

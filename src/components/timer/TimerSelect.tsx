@@ -1,5 +1,6 @@
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import dynamic from "next/dynamic";
+
 import { TimerOption } from "./Timer";
 
 const Select = dynamic(
@@ -7,12 +8,14 @@ const Select = dynamic(
   { ssr: false },
 );
 
+export type TimeSelectOption = { label: string; value: number };
+
 interface SelectProps {
   label: string;
   options: TimerOption[];
-  value: TimerOption | null;
+  value: number;
   // eslint-disable-next-line no-unused-vars
-  onChange: (newValue: TimerOption | null) => void;
+  onChange: (newValue: TimeSelectOption) => void;
   isDisabled?: boolean;
 }
 
@@ -28,19 +31,21 @@ function TimeSelect({
     <FormControl width="110px">
       <FormLabel htmlFor={label}>{label}</FormLabel>
       <Select
-        {...rest}
+        size="lg"
+        useBasicStyles
+        placeholder="00"
+        isDisabled={isDisabled}
         id={label}
         instanceId={`time-select-${label}`}
         options={options}
-        value={value}
+        value={options.filter((option) => {
+          return option.value === value;
+        })}
         onChange={(newValue) => {
           if (!newValue) return;
-          handleChange(newValue as TimerOption);
+          handleChange(newValue as TimeSelectOption);
         }}
-        placeholder="00"
-        isDisabled={isDisabled}
-        useBasicStyles
-        size="lg"
+        {...rest}
       />
     </FormControl>
   );
