@@ -24,6 +24,8 @@ function Timer() {
     sec: 0,
   });
 
+  const disabled = time.hour === 0 && time.min === 0 && time.sec === 0;
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setTime((prevTime) => {
@@ -37,6 +39,7 @@ function Timer() {
           if (min === 0) {
             if (hour === 0) {
               clearInterval(intervalId);
+              // setIsRunning(false);
               return prevTime;
             }
             hour -= 1;
@@ -85,6 +88,7 @@ function Timer() {
         setIsRunning={setIsRunning}
         isPaused={isPaused}
         setIsPaused={setIsPaused}
+        disabled={disabled}
       />
     </>
   );

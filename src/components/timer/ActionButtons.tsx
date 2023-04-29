@@ -7,9 +7,11 @@ interface ActionButtonsProps {
   setIsRunning: React.Dispatch<React.SetStateAction<boolean>>;
   isPaused: boolean;
   setIsPaused: React.Dispatch<React.SetStateAction<boolean>>;
+  disabled: boolean;
 }
 
 function ActionButtons({
+  disabled,
   isRunning,
   setIsRunning,
   isPaused,
@@ -33,11 +35,19 @@ function ActionButtons({
         취소
       </Button>
       {isRunning ? (
-        <Button variant="primary" onClick={handleClickPauseButton}>
+        <Button
+          isDisabled={disabled}
+          variant="primary"
+          onClick={handleClickPauseButton}
+        >
           {isPaused ? "재개" : "일시정지"}
         </Button>
       ) : (
-        <Button variant="primary" onClick={handleClickStartButton}>
+        <Button
+          isDisabled={disabled}
+          variant="primary"
+          onClick={handleClickStartButton}
+        >
           시작
         </Button>
       )}
