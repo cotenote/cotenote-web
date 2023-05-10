@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Flex } from "@chakra-ui/react";
 import { TimerCounter, ActionButtons } from "@/components/timer";
 import Head from "next/head";
@@ -23,46 +23,63 @@ function Timer() {
     min: 0,
     sec: 0,
   });
+  const rafRef = useRef<number>(0);
 
   const disabled = time.hour === 0 && time.min === 0 && time.sec === 0;
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTime((prevTime) => {
-        if (!isRunning || isPaused) {
-          clearInterval(intervalId);
-          return prevTime;
-        }
-        let { hour, min, sec } = prevTime;
+    return () => cancelAnimationFrame(rafRef.current);
+  }, []);
 
-        if (sec === 0) {
-          if (min === 0) {
-            if (hour === 0) {
-              clearInterval(intervalId);
-              // setIsRunning(false);
-              return prevTime;
+  useEffect(() => {
+    let start: number | null = null;
+    let elapsed = 0;
+
+    const step = (timestamp: number) => {
+      if (!isRunning || isPaused) return;
+
+      if (!start) start = timestamp;
+
+      elapsed = timestamp - start;
+
+      if (elapsed >= 1000) {
+        start = timestamp;
+
+        setTime((prevTime: Time) => {
+          let { hour, min, sec } = prevTime;
+
+          if (sec === 0) {
+            if (min === 0) {
+              if (hour === 0) {
+                setIsRunning(false);
+                return prevTime;
+              }
+              hour -= 1;
+              min = 59;
+              sec = 59;
+            } else {
+              min -= 1;
+              sec = 59;
             }
-            hour -= 1;
-            min = 59;
-            sec = 59;
           } else {
-            min -= 1;
-            sec = 59;
+            sec -= 1;
           }
-        } else {
-          sec -= 1;
-        }
 
-        return {
-          hour,
-          min,
-          sec,
-        };
-      });
-    }, 1000);
+          return {
+            hour,
+            min,
+            sec,
+          };
+        });
+      }
 
-    return () => clearInterval(intervalId);
-  }, [isPaused, isRunning, time]);
+      rafRef.current = requestAnimationFrame(step);
+    };
+
+    rafRef.current = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [isRunning, isPaused]);
 
   return (
     <>
