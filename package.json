@@ -7,8 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "jest --watch",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
