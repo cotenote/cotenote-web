@@ -17,6 +17,8 @@ export const getSpeech = (text) => {
 
     utterThis.lang = lang;
 
+    utterThis.rate = 0.9;
+
     const korVoice = voices.find(
       (elem) => elem.lang === lang || elem.lang === lang.replace("-", "_"),
     );
