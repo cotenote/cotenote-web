@@ -1,1 +1,1 @@
-export { default as SpeechAccordion } from "./SpeechAccordion";
+export { default as RandomCard } from "./RandomCard";
