@@ -34,10 +34,10 @@ function RandomCard() {
   };
   return (
     <Flex
-      maxW="500px"
-      m="auto"
+      w="500px"
       pt="50px"
       gap="10px"
+      px="15px"
       alignItems="center"
       flexDirection="column"
     >

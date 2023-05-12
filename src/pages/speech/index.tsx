@@ -1,13 +1,23 @@
-import { RandomCard } from "@/components/speech";
+import { Camera, RandomCard } from "@/components/speech";
 import { Layout } from "@/layouts";
-import { Box } from "@chakra-ui/layout";
+import { Flex } from "@chakra-ui/layout";
 import React, { ReactElement } from "react";
 
 function ReadPage() {
   return (
-    <Box as="div" p="15px">
+    <Flex
+      maxW="1000px"
+      w="fit-content"
+      h="80vh"
+      justifyContent="space-between"
+      alignItems="center"
+      as="div"
+      p="15px"
+      m="auto"
+    >
       <RandomCard />
-    </Box>
+      <Camera />
+    </Flex>
   );
 }
 

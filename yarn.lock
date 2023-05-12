@@ -3753,6 +3753,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-is: ^18.2.0
+    react-webcam: ^7.0.1
     typescript: 4.9.5
   languageName: unknown
   linkType: soft
@@ -7576,6 +7577,16 @@ __metadata:
     react: ">=16.6.0"
     react-dom: ">=16.6.0"
   checksum: 75602840106aa9c6545149d6d7ae1502fb7b7abadcce70a6954c4b64a438ff1cd16fc77a0a1e5197cdd72da398f39eb929ea06f9005c45b132ed34e056ebdeb1
+  languageName: node
+  linkType: hard
+
+"react-webcam@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "react-webcam@npm:7.0.1"
+  peerDependencies:
+    react: ">=16.2.0"
+    react-dom: ">=16.2.0"
+  checksum: b1df32c3bfe3fafdb291b06266b30aa2ba88df2a51e04121fb09509feb88fb25fe3291733a9fb9674b56b964b6e69fe801f99e4fd20418520cd2e7641c46c647
   languageName: node
   linkType: hard
 
