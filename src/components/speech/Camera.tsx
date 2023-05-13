@@ -4,8 +4,8 @@ import Webcam from "react-webcam";
 
 function Camera() {
   return (
-    <Box p="10px">
-      <Webcam width={450} height={400} />
+    <Box w={{ base: "auto", md: "450px" }}>
+      <Webcam width={450} />
     </Box>
   );
 }

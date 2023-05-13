@@ -10,6 +10,7 @@ function Header() {
       as="header"
       width="100%"
       height="var(--header-height)"
+      bg="white"
       p={{ base: "0 15px", md: "0 32px" }}
       borderBottom="var(--zero-point-five) solid #c5c7c2"
       pos="fixed"

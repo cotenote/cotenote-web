@@ -1,9 +1,9 @@
 "use client";
 
-import { database } from "@/constants/speech";
 import { Button, Flex, Box, Center } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { getSpeech } from "@/utils/getSpeech";
+import { database } from "@/constants/speech/database";
 
 function RandomCard() {
   const [index, setIndex] = useState<number>(-1);
@@ -34,7 +34,8 @@ function RandomCard() {
   };
   return (
     <Flex
-      w="500px"
+      w={{ base: "auto", md: "500px" }}
+      maxW="500px"
       pt="50px"
       gap="10px"
       px="15px"
@@ -54,12 +55,13 @@ function RandomCard() {
               <Box
                 as="pre"
                 mt="15px"
-                minH="250px"
+                h="250px"
                 p="10px"
                 w="100%"
                 bg="lightgray"
                 whiteSpace="pre-wrap"
                 borderRadius="4px"
+                overflow="scroll"
               >
                 {database[index].content}
               </Box>
@@ -73,9 +75,12 @@ function RandomCard() {
         <Button onClick={handleClickRandomShow}>시작 </Button>
       ) : (
         <Flex as="div" gap="10px">
-          <Button onClick={handleClickContentView}>정답 보기</Button>
+          <Button onClick={handleClickContentView}>
+            정답 {contentView ? "닫기" : "보기"}
+          </Button>
           <Button onClick={handleClickReplayButton}>다시듣기</Button>
           <Button
+            variant="primary"
             isDisabled={database.length === shownIndexes.length}
             onClick={handleClickRandomShow}
           >

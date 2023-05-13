@@ -8,7 +8,8 @@ function ReadPage() {
     <Flex
       maxW="1000px"
       w="fit-content"
-      h="80vh"
+      pt={{ base: "15px", md: "50px" }}
+      flexDirection={{ base: "column-reverse", md: "row" }}
       justifyContent="space-between"
       alignItems="center"
       as="div"
