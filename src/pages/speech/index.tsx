@@ -1,29 +1,38 @@
-import { Camera, RandomCard } from "@/components/speech";
+import { SpeechSection } from "@/components/speech";
 import { Layout } from "@/layouts";
-import { Flex } from "@chakra-ui/layout";
+import { Stack } from "@chakra-ui/react";
+import Head from "next/head";
 import React, { ReactElement } from "react";
 
-function ReadPage() {
+const speechSections = [
+  { sectionTitle: "CS", subsections: [{ subtitle: "database" }] },
+  {
+    sectionTitle: "Front-end",
+    subsections: [{ subtitle: "react" }, { subtitle: "javascript" }],
+  },
+];
+
+function SpeechPage() {
   return (
-    <Flex
-      maxW="1000px"
-      w="fit-content"
-      pt={{ base: "15px", md: "50px" }}
-      flexDirection={{ base: "column-reverse", md: "row" }}
-      justifyContent="space-between"
-      alignItems="center"
-      as="div"
-      p="15px"
-      m="auto"
-    >
-      <RandomCard />
-      <Camera />
-    </Flex>
+    <>
+      <Head>
+        <title>모의 면접 - 모의 면접 대비</title>
+        <meta name="description" content="모의 면접 페이지" />
+      </Head>
+      <Stack maxW="300px" m="auto" pt="10vh">
+        {speechSections.map((section) => (
+          <SpeechSection
+            name={section.sectionTitle}
+            subsections={section.subsections}
+          />
+        ))}
+      </Stack>
+    </>
   );
 }
 
-export default ReadPage;
+export default SpeechPage;
 
-ReadPage.getLayout = function getLayout(page: ReactElement) {
+SpeechPage.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };

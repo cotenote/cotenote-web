@@ -11,7 +11,7 @@ function TileContainer() {
       gap={["60px", "70px", "75px", "80px"]}
     >
       <Tile title="타이머" icon={<TimeIcon />} href="/timer" />
-      <Tile title="면접준비" icon={<EditIcon />} href="/speech" />
+      <Tile title="모의면접" icon={<EditIcon />} href="/speech" />
       <Tile title="오답노트" icon={<CheckIcon />} />
     </Grid>
   );
